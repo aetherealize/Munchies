@@ -1,0 +1,159 @@
+<h1>New food</h1>
+
+<% form_for(@food) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :energy %><br />
+    <%= f.text_field :energy %>
+  </p>
+  <p>
+    <%= f.label :protein %><br />
+    <%= f.text_field :protein %>
+  </p>
+  <p>
+    <%= f.label :total_fats %><br />
+    <%= f.text_field :total_fats %>
+  </p>
+  <p>
+    <%= f.label :carbohydrate %><br />
+    <%= f.text_field :carbohydrate %>
+  </p>
+  <p>
+    <%= f.label :total_dietary_fiber %><br />
+    <%= f.text_field :total_dietary_fiber %>
+  </p>
+  <p>
+    <%= f.label :total_sugars %><br />
+    <%= f.text_field :total_sugars %>
+  </p>
+  <p>
+    <%= f.label :calcium %><br />
+    <%= f.text_field :calcium %>
+  </p>
+  <p>
+    <%= f.label :iron %><br />
+    <%= f.text_field :iron %>
+  </p>
+  <p>
+    <%= f.label :magnesium %><br />
+    <%= f.text_field :magnesium %>
+  </p>
+  <p>
+    <%= f.label :phosphorus %><br />
+    <%= f.text_field :phosphorus %>
+  </p>
+  <p>
+    <%= f.label :potassium %><br />
+    <%= f.text_field :potassium %>
+  </p>
+  <p>
+    <%= f.label :sodium %><br />
+    <%= f.text_field :sodium %>
+  </p>
+  <p>
+    <%= f.label :zinc %><br />
+    <%= f.text_field :zinc %>
+  </p>
+  <p>
+    <%= f.label :copper %><br />
+    <%= f.text_field :copper %>
+  </p>
+  <p>
+    <%= f.label :manganese %><br />
+    <%= f.text_field :manganese %>
+  </p>
+  <p>
+    <%= f.label :fluoride %><br />
+    <%= f.text_field :fluoride %>
+  </p>
+  <p>
+    <%= f.label :selenium %><br />
+    <%= f.text_field :selenium %>
+  </p>
+  <p>
+    <%= f.label :vitamin_c %><br />
+    <%= f.text_field :vitamin_c %>
+  </p>
+  <p>
+    <%= f.label :thiamin %><br />
+    <%= f.text_field :thiamin %>
+  </p>
+  <p>
+    <%= f.label :riboflavin %><br />
+    <%= f.text_field :riboflavin %>
+  </p>
+  <p>
+    <%= f.label :niacin %><br />
+    <%= f.text_field :niacin %>
+  </p>
+  <p>
+    <%= f.label :vitamin_b6 %><br />
+    <%= f.text_field :vitamin_b6 %>
+  </p>
+  <p>
+    <%= f.label :vitamin_b12 %><br />
+    <%= f.text_field :vitamin_b12 %>
+  </p>
+  <p>
+    <%= f.label :vitamin_a_rae %><br />
+    <%= f.text_field :vitamin_a_rae %>
+  </p>
+  <p>
+    <%= f.label :vitamin_a_iu %><br />
+    <%= f.text_field :vitamin_a_iu %>
+  </p>
+  <p>
+    <%= f.label :beta_carotene %><br />
+    <%= f.text_field :beta_carotene %>
+  </p>
+  <p>
+    <%= f.label :alpha_carotene %><br />
+    <%= f.text_field :alpha_carotene %>
+  </p>
+  <p>
+    <%= f.label :lycopene %><br />
+    <%= f.text_field :lycopene %>
+  </p>
+  <p>
+    <%= f.label :vitamin_e %><br />
+    <%= f.text_field :vitamin_e %>
+  </p>
+  <p>
+    <%= f.label :vitamin_k %><br />
+    <%= f.text_field :vitamin_k %>
+  </p>
+  <p>
+    <%= f.label :total_saturated_fats %><br />
+    <%= f.text_field :total_saturated_fats %>
+  </p>
+  <p>
+    <%= f.label :total_unsaturated_fats %><br />
+    <%= f.text_field :total_unsaturated_fats %>
+  </p>
+  <p>
+    <%= f.label :total_polyunsaturated_fats %><br />
+    <%= f.text_field :total_polyunsaturated_fats %>
+  </p>
+  <p>
+    <%= f.label :alcohol %><br />
+    <%= f.text_field :alcohol %>
+  </p>
+  <p>
+    <%= f.label :caffeine %><br />
+    <%= f.text_field :caffeine %>
+  </p>
+  <p>
+    <%= f.label :water %><br />
+    <%= f.text_field :water %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', foods_path %>

@@ -1,0 +1,195 @@
+<p>
+  <b>Name:</b>
+  <%=h @food.name %>
+</p>
+
+<p>
+  <b>Energy:</b>
+  <%=h @food.energy %>
+</p>
+
+<p>
+  <b>Protein:</b>
+  <%=h @food.protein %>
+</p>
+
+<p>
+  <b>Total fats:</b>
+  <%=h @food.total_fats %>
+</p>
+
+<p>
+  <b>Carbohydrate:</b>
+  <%=h @food.carbohydrate %>
+</p>
+
+<p>
+  <b>Total dietary fiber:</b>
+  <%=h @food.total_dietary_fiber %>
+</p>
+
+<p>
+  <b>Total sugars:</b>
+  <%=h @food.total_sugars %>
+</p>
+
+<p>
+  <b>Calcium:</b>
+  <%=h @food.calcium %>
+</p>
+
+<p>
+  <b>Iron:</b>
+  <%=h @food.iron %>
+</p>
+
+<p>
+  <b>Magnesium:</b>
+  <%=h @food.magnesium %>
+</p>
+
+<p>
+  <b>Phosphorus:</b>
+  <%=h @food.phosphorus %>
+</p>
+
+<p>
+  <b>Potassium:</b>
+  <%=h @food.potassium %>
+</p>
+
+<p>
+  <b>Sodium:</b>
+  <%=h @food.sodium %>
+</p>
+
+<p>
+  <b>Zinc:</b>
+  <%=h @food.zinc %>
+</p>
+
+<p>
+  <b>Copper:</b>
+  <%=h @food.copper %>
+</p>
+
+<p>
+  <b>Manganese:</b>
+  <%=h @food.manganese %>
+</p>
+
+<p>
+  <b>Fluoride:</b>
+  <%=h @food.fluoride %>
+</p>
+
+<p>
+  <b>Selenium:</b>
+  <%=h @food.selenium %>
+</p>
+
+<p>
+  <b>Vitamin c:</b>
+  <%=h @food.vitamin_c %>
+</p>
+
+<p>
+  <b>Thiamin:</b>
+  <%=h @food.thiamin %>
+</p>
+
+<p>
+  <b>Riboflavin:</b>
+  <%=h @food.riboflavin %>
+</p>
+
+<p>
+  <b>Niacin:</b>
+  <%=h @food.niacin %>
+</p>
+
+<p>
+  <b>Vitamin b6:</b>
+  <%=h @food.vitamin_b6 %>
+</p>
+
+<p>
+  <b>Vitamin b12:</b>
+  <%=h @food.vitamin_b12 %>
+</p>
+
+<p>
+  <b>Vitamin a rae:</b>
+  <%=h @food.vitamin_a_rae %>
+</p>
+
+<p>
+  <b>Vitamin a iu:</b>
+  <%=h @food.vitamin_a_iu %>
+</p>
+
+<p>
+  <b>Beta carotene:</b>
+  <%=h @food.beta_carotene %>
+</p>
+
+<p>
+  <b>Alpha carotene:</b>
+  <%=h @food.alpha_carotene %>
+</p>
+
+<p>
+  <b>Lycopene:</b>
+  <%=h @food.lycopene %>
+</p>
+
+<p>
+  <b>Vitamin e:</b>
+  <%=h @food.vitamin_e %>
+</p>
+
+<p>
+  <b>Vitamin k:</b>
+  <%=h @food.vitamin_k %>
+</p>
+
+<p>
+  <b>Total saturated fats:</b>
+  <%=h @food.total_saturated_fats %>
+</p>
+
+<p>
+  <b>Total unsaturated fats:</b>
+  <%=h @food.total_unsaturated_fats %>
+</p>
+
+<p>
+  <b>Total polyunsaturated fats:</b>
+  <%=h @food.total_polyunsaturated_fats %>
+</p>
+
+<p>
+  <b>Alcohol:</b>
+  <%=h @food.alcohol %>
+</p>
+
+<p>
+  <b>Caffeine:</b>
+  <%=h @food.caffeine %>
+</p>
+
+<p>
+  <b>Water:</b>
+  <%=h @food.water %>
+</p>
+
+<h2>Serving Sizes</h2> 
+<% @food.serving_sizes.each do |s| %>
+<p>  <b>Description:</b>  
+<%=h s.description %>  </p>  <p> 
+<b>Mass:</b>  <%=h s.mass %>  </p>
+<% end %> 
+
+<%= link_to 'Edit', edit_food_path(@food) %> |
+<%= link_to 'Back', foods_path %>
+<%= link_to 'Manage Serving Sizes', food_serving_sizes_path(@food) %> 

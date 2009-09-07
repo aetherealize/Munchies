@@ -1,0 +1,9 @@
+<h1>Editing serving_size</h1> 
+<% form_for([@food, @serving_size]) do |f| %>  
+<%= f.error_messages %> 
+<p>  <%= f.label :description %><br /> 
+<%= f.text_field :description %>  </p>  <p>
+<%= f.label :mass %><br />  <%= f.text_area :mass %>  </p>  <p>
+<%= f.submit "Update" %>  </p> <% end %>
+<%= link_to 'Show', food_serving_size_path(@food, @serving_size) %>
+<%= link_to 'Back', food_serving_sizes_path(@food) %> 

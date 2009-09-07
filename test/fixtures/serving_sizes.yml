@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  food: 
+  description: MyString
+  mass: 1.5
+
+two:
+  food: 
+  description: MyString
+  mass: 1.5

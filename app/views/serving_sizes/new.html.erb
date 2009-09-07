@@ -1,0 +1,15 @@
+<h1>New serving size</h1>
+<% form_for([@food, @serving_size]) do |f| %>
+<%= f.error_messages %>
+<p><%= f.label :description %><br />  
+<%= f.text_field :description %>
+</p>
+<p>
+<%= f.label :mass %><br />
+<%= f.text_area :mass %>
+</p>
+<p>
+<%= f.submit "Create" %>
+</p>
+<% end %>
+<%= link_to 'Back', food_serving_sizes_path(@food) %> 

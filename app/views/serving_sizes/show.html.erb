@@ -1,0 +1,8 @@
+<h1>Serving size on <%= @food.name %></h1>
+<p>
+<b>Description</b>
+<%=h @serving_size.description %>
+</p> <p> 
+<b>Mass:</b>  <%=h @serving_size.mass %> </p>
+<%= link_to 'Edit', edit_food_serving_size_path(@food, @serving_size) %>
+<%= link_to 'Back', food_serving_sizes_path(@food) %>

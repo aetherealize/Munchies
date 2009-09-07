@@ -1,0 +1,4 @@
+class Food < ActiveRecord::Base
+   has_many :serving_sizes
+   validates_presence_of :name
+end
