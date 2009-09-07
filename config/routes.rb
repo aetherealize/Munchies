@@ -2,8 +2,9 @@ ActionController::Routing::Routes.draw do |map|
 
    map.resources :foods
    map.resources :serving_sizes
-   
    map.resources :foods, :has_many => :serving_sizes
+   
+   map.resources :users
 
 
 
