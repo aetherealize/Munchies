@@ -1830,3 +1830,873 @@ Processing UsersController#index (for 127.0.0.1 at 2009-09-07 06:30:26) [GET]
   [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` [0m
 Rendering users/index
 Completed in 4ms (View: 0, DB: 0) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateFoods (20090816140958)
+Migrating to CreateServingSizes (20090907062153)
+Migrating to CreateUsers (20090907105929)
+Migrating to CreateMealPlans (20090907181734)
+  [4;36;1mSQL (57.7ms)[0m   [0;1mCREATE TABLE `meal_plans` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (24.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090907181734')[0m
+Migrating to CreateUsersMealPlans (20090907181904)
+  [4;36;1mSQL (65.6ms)[0m   [0;1mCREATE TABLE `users_meal_plans` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `meal_plan_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (33.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090907181904')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `foods`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `foods`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `foods`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mdescribe `meal_plans`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `meal_plans`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW FIELDS FROM `serving_sizes`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mdescribe `serving_sizes`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `serving_sizes`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW FIELDS FROM `users_meal_plans`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mdescribe `users_meal_plans`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `users_meal_plans`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-09-07 14:30:14) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering users/index
+Completed in 12ms (View: 0, DB: 0) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-09-07 14:30:16) [GET]
+  [4;35;1mUser Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-09-07 14:30:18) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"0tlVtrubLvb1KxUzpDIzECBdPHlnAz1DHGOkycDBp9w=", "user"=>{"username"=>"joshua"}}
+  [4;36;1mUser Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`created_at`, `updated_at`, `username`) VALUES('2009-09-07 19:30:18', '2009-09-07 19:30:18', 'joshua')[0m
+  [4;35;1mSQL (47.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/4
+Completed in 54ms (DB: 48) | 302 Found [http://localhost/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-09-07 14:30:18) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 4) [0m
+Rendering users/show
+
+ActionView::TemplateError (Could not find the association :users_meal_plans in model User) on line #6 of app/views/users/show.html.erb:
+3:   <b>Username</b>
+4:   <%= h @user.username %>
+5: </p>
+6: <% @user.meal_plans.each do |p| %>
+7: <p><b><%= h p.id %></b></p>
+8: <% end  %>
+9: 
+
+    app/views/users/show.html.erb:6
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (26.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-09-07 14:37:20) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mUser Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 4) [0m
+Rendering users/show
+  [4;36;1mMealPlan Load (0.2ms)[0m   [0;1mSELECT `meal_plans`.* FROM `meal_plans` INNER JOIN `users_meal_plans` ON `meal_plans`.id = `users_meal_plans`.meal_plan_id WHERE ((`users_meal_plans`.user_id = 4)) [0m
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/users/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-09-07 14:37:23) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering users/index
+  [4;36;1mUser Columns (0.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-09-07 14:37:24) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mUser Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 4) [0m
+Rendering users/show
+  [4;35;1mMealPlan Load (0.2ms)[0m   [0mSELECT `meal_plans`.* FROM `meal_plans` INNER JOIN `users_meal_plans` ON `meal_plans`.id = `users_meal_plans`.meal_plan_id WHERE ((`users_meal_plans`.user_id = 4)) [0m
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/users/4]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-09-07 14:37:25) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering users/index
+  [4;35;1mUser Columns (0.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (7.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2009-09-07 14:37:31) [DELETE]
+  Parameters: {"authenticity_token"=>"0tlVtrubLvb1KxUzpDIzECBdPHlnAz1DHGOkycDBp9w=", "id"=>"4"}
+  [4;36;1mUser Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 4) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Destroy (0.2ms)[0m   [0mDELETE FROM `users` WHERE `id` = 4[0m
+  [4;36;1mSQL (22.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed in 30ms (DB: 30) | 302 Found [http://localhost/users/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-09-07 14:37:31) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering users/index
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateFoods (20090816140958)
+Migrating to CreateServingSizes (20090907062153)
+Migrating to CreateUsers (20090907105929)
+Migrating to CreateMealPlans (20090907181734)
+Migrating to CreateUsersMealPlans (20090907181904)
+Migrating to AddNameToMealPlans (20090907194205)
+  [4;36;1mSQL (154.4ms)[0m   [0;1mALTER TABLE `meal_plans` ADD `name` varchar(255)[0m
+  [4;35;1mSQL (24.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090907194205')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `foods`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `foods`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `foods`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mdescribe `meal_plans`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `meal_plans`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW FIELDS FROM `serving_sizes`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mdescribe `serving_sizes`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `serving_sizes`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW FIELDS FROM `users_meal_plans`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mdescribe `users_meal_plans`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `users_meal_plans`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 14:47:57) [GET]
+
+ActionController::RoutingError (No route matches "/meal_plans" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 14:48:03) [GET]
+
+ActionController::RoutingError (No route matches "/meal_plans/new" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-07 14:48:11) [GET]
+
+ActionController::RoutingError (No route matches "/mealplans" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-09-07 14:48:16) [GET]
+Rendering home/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#index (for 127.0.0.1 at 2009-09-07 14:49:34) [GET]
+Rendering meal_plans/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/meal_plans]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#new (for 127.0.0.1 at 2009-09-07 14:49:41) [GET]
+  [4;36;1mMealPlan Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+Rendering meal_plans/new
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/meal_plans/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#index (for 127.0.0.1 at 2009-09-07 14:49:44) [GET]
+Rendering meal_plans/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://localhost/meal_plans]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#index (for 127.0.0.1 at 2009-09-07 14:51:57) [GET]
+Rendering meal_plans/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://localhost/meal_plans]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#new (for 127.0.0.1 at 2009-09-07 14:52:00) [GET]
+  [4;35;1mMealPlan Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `meal_plans`[0m
+Rendering meal_plans/new
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/meal_plans/new]
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#create (for 127.0.0.1 at 2009-09-07 14:52:06) [POST]
+  Parameters: {"commit"=>"Create", "meal_plan"=>{"name"=>"My Meal Plan"}, "authenticity_token"=>"0tlVtrubLvb1KxUzpDIzECBdPHlnAz1DHGOkycDBp9w="}
+  [4;36;1mMealPlan Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMealPlan Create (0.1ms)[0m   [0;1mINSERT INTO `meal_plans` (`name`, `created_at`, `updated_at`) VALUES('My Meal Plan', '2009-09-07 19:52:06', '2009-09-07 19:52:06')[0m
+  [4;35;1mSQL (61.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/meal_plans/1
+Completed in 73ms (DB: 64) | 302 Found [http://localhost/meal_plans]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#show (for 127.0.0.1 at 2009-09-07 14:52:06) [GET]
+  Parameters: {"id"=>"1"}
+Rendering meal_plans/show
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/meal_plans/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-09-07 14:53:00) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering users/index
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-09-07 14:53:02) [GET]
+  [4;35;1mUser Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-09-07 14:53:03) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering users/index
+Completed in 4ms (View: 0, DB: 1) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (1.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-09-07 14:53:05) [GET]
+  [4;35;1mUser Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Completed in 44ms (View: 2, DB: 2) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-09-07 14:53:08) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering users/index
+Completed in 5ms (View: 0, DB: 0) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#index (for 127.0.0.1 at 2009-09-07 14:55:23) [GET]
+  [4;35;1mMealPlan Load (0.2ms)[0m   [0mSELECT * FROM `meal_plans` [0m
+Rendering meal_plans/index
+Completed in 5ms (View: 0, DB: 0) | 200 OK [http://localhost/meal_plans]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#index (for 127.0.0.1 at 2009-09-07 14:57:21) [GET]
+  [4;36;1mMealPlan Load (0.2ms)[0m   [0;1mSELECT * FROM `meal_plans` [0m
+Rendering meal_plans/index
+  [4;35;1mMealPlan Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `meal_plans`[0m
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/meal_plans]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#index (for 127.0.0.1 at 2009-09-07 15:00:30) [GET]
+  [4;36;1mMealPlan Load (0.5ms)[0m   [0;1mSELECT * FROM `meal_plans` [0m
+Rendering meal_plans/index
+  [4;35;1mMealPlan Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `meal_plans`[0m
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/meal_plans]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#show (for 127.0.0.1 at 2009-09-07 15:00:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMealPlan Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+  [4;35;1mMealPlan Load (0.1ms)[0m   [0mSELECT * FROM `meal_plans` WHERE (`meal_plans`.`id` = 1) [0m
+Rendering meal_plans/show
+Completed in 7ms (View: 0, DB: 3) | 200 OK [http://localhost/meal_plans/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#new (for 127.0.0.1 at 2009-09-07 15:00:36) [GET]
+  [4;36;1mMealPlan Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+Rendering meal_plans/new
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/meal_plans/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#index (for 127.0.0.1 at 2009-09-07 15:00:38) [GET]
+  [4;35;1mMealPlan Load (0.6ms)[0m   [0mSELECT * FROM `meal_plans` [0m
+Rendering meal_plans/index
+  [4;36;1mMealPlan Columns (0.2ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+Completed in 7ms (View: 2, DB: 1) | 200 OK [http://localhost/meal_plans]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#destroy (for 127.0.0.1 at 2009-09-07 15:00:40) [DELETE]
+  Parameters: {"authenticity_token"=>"0tlVtrubLvb1KxUzpDIzECBdPHlnAz1DHGOkycDBp9w=", "id"=>"1"}
+  [4;35;1mMealPlan Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `meal_plans`[0m
+  [4;36;1mMealPlan Load (0.1ms)[0m   [0;1mSELECT * FROM `meal_plans` WHERE (`meal_plans`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMealPlan Destroy (0.1ms)[0m   [0;1mDELETE FROM `meal_plans` WHERE `id` = 1[0m
+  [4;35;1mSQL (40.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/meal_plans
+Completed in 45ms (DB: 41) | 302 Found [http://localhost/meal_plans/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#index (for 127.0.0.1 at 2009-09-07 15:00:40) [GET]
+  [4;36;1mMealPlan Load (0.2ms)[0m   [0;1mSELECT * FROM `meal_plans` [0m
+Rendering meal_plans/index
+Completed in 5ms (View: 0, DB: 0) | 200 OK [http://localhost/meal_plans]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#new (for 127.0.0.1 at 2009-09-07 15:00:41) [GET]
+  [4;35;1mMealPlan Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `meal_plans`[0m
+Rendering meal_plans/new
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/meal_plans/new]
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#create (for 127.0.0.1 at 2009-09-07 15:00:45) [POST]
+  Parameters: {"commit"=>"Create", "meal_plan"=>{"name"=>"My Meal Plan"}, "authenticity_token"=>"0tlVtrubLvb1KxUzpDIzECBdPHlnAz1DHGOkycDBp9w="}
+  [4;36;1mMealPlan Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMealPlan Create (0.1ms)[0m   [0;1mINSERT INTO `meal_plans` (`name`, `created_at`, `updated_at`) VALUES('My Meal Plan', '2009-09-07 20:00:45', '2009-09-07 20:00:45')[0m
+  [4;35;1mSQL (46.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/meal_plans/2
+Completed in 53ms (DB: 48) | 302 Found [http://localhost/meal_plans]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#show (for 127.0.0.1 at 2009-09-07 15:00:45) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMealPlan Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+  [4;35;1mMealPlan Load (0.1ms)[0m   [0mSELECT * FROM `meal_plans` WHERE (`meal_plans`.`id` = 2) [0m
+Rendering meal_plans/show
+Completed in 5ms (View: 0, DB: 1) | 200 OK [http://localhost/meal_plans/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#show (for 127.0.0.1 at 2009-09-07 15:02:56) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMealPlan Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+  [4;35;1mMealPlan Load (0.3ms)[0m   [0mSELECT * FROM `meal_plans` WHERE (`meal_plans`.`id` = 2) [0m
+Rendering meal_plans/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #4 of app/views/meal_plans/show.html.erb:
+1: <h1>Meal Plans : Show</h1>
+2: <p>
+3:   <b>Name: </b>
+4:   <%= h @meal_plan.name %>
+5: </p>
+6: 
+7: <%= link_to 'Edit', edit_meal_plan_path(@meal_plan) %> |
+
+    app/views/meal_plans/show.html.erb:4
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (23.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (5.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#show (for 127.0.0.1 at 2009-09-07 15:03:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMealPlan Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+  [4;35;1mMealPlan Load (0.1ms)[0m   [0mSELECT * FROM `meal_plans` WHERE (`meal_plans`.`id` = 2) [0m
+Rendering meal_plans/show
+Completed in 10ms (View: 1, DB: 6) | 200 OK [http://localhost/meal_plans/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#edit (for 127.0.0.1 at 2009-09-07 15:03:19) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMealPlan Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+  [4;35;1mMealPlan Load (0.1ms)[0m   [0mSELECT * FROM `meal_plans` WHERE (`meal_plans`.`id` = 2) [0m
+Rendering meal_plans/edit
+Completed in 7ms (View: 2, DB: 1) | 200 OK [http://localhost/meal_plans/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#index (for 127.0.0.1 at 2009-09-07 15:04:40) [GET]
+  [4;36;1mMealPlan Load (0.2ms)[0m   [0;1mSELECT * FROM `meal_plans` [0m
+Rendering meal_plans/index
+  [4;35;1mMealPlan Columns (0.2ms)[0m   [0mSHOW FIELDS FROM `meal_plans`[0m
+Completed in 6ms (View: 2, DB: 1) | 200 OK [http://localhost/meal_plans/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#edit (for 127.0.0.1 at 2009-09-07 15:04:43) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMealPlan Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+  [4;35;1mMealPlan Load (0.1ms)[0m   [0mSELECT * FROM `meal_plans` WHERE (`meal_plans`.`id` = 2) [0m
+Rendering meal_plans/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/meal_plans/edit.html.erb:
+1: <h1>Edit meal plan</h1>
+2: 
+3: <% form_for(@meal_plan) do |p| %>
+4:   <%= p.error_messages %>
+5:   <p>
+6:     <%= p.label :name %><br />
+
+    app/views/meal_plans/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (67.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (5.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#edit (for 127.0.0.1 at 2009-09-07 15:05:10) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMealPlan Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+  [4;35;1mMealPlan Load (0.1ms)[0m   [0mSELECT * FROM `meal_plans` WHERE (`meal_plans`.`id` = 2) [0m
+Rendering meal_plans/edit
+Completed in 8ms (View: 2, DB: 6) | 200 OK [http://localhost/meal_plans/2/edit]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#update (for 127.0.0.1 at 2009-09-07 15:05:14) [PUT]
+  Parameters: {"commit"=>"Update", "meal_plan"=>{"name"=>"My Meal Plan!"}, "authenticity_token"=>"0tlVtrubLvb1KxUzpDIzECBdPHlnAz1DHGOkycDBp9w=", "id"=>"2"}
+
+ActionView::MissingTemplate (Missing template meal_plans/update.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#show (for 127.0.0.1 at 2009-09-07 15:08:35) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMealPlan Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+  [4;35;1mMealPlan Load (0.3ms)[0m   [0mSELECT * FROM `meal_plans` WHERE (`meal_plans`.`id` = 2) [0m
+Rendering meal_plans/show
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/meal_plans/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#edit (for 127.0.0.1 at 2009-09-07 15:08:37) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMealPlan Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+  [4;35;1mMealPlan Load (0.1ms)[0m   [0mSELECT * FROM `meal_plans` WHERE (`meal_plans`.`id` = 2) [0m
+Rendering meal_plans/edit
+Completed in 6ms (View: 2, DB: 1) | 200 OK [http://localhost/meal_plans/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#update (for 127.0.0.1 at 2009-09-07 15:08:41) [PUT]
+  Parameters: {"commit"=>"Update", "meal_plan"=>{"name"=>"My Meal Plan!"}, "authenticity_token"=>"0tlVtrubLvb1KxUzpDIzECBdPHlnAz1DHGOkycDBp9w=", "id"=>"2"}
+  [4;36;1mMealPlan Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+  [4;35;1mMealPlan Load (0.1ms)[0m   [0mSELECT * FROM `meal_plans` WHERE (`meal_plans`.`id` = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMealPlan Update (0.1ms)[0m   [0mUPDATE `meal_plans` SET `updated_at` = '2009-09-07 20:08:41', `name` = 'My Meal Plan!' WHERE `id` = 2[0m
+  [4;36;1mSQL (52.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/meal_plans/2
+Completed in 61ms (DB: 53) | 302 Found [http://localhost/meal_plans/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#show (for 127.0.0.1 at 2009-09-07 15:08:41) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mMealPlan Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `meal_plans`[0m
+  [4;36;1mMealPlan Load (0.1ms)[0m   [0;1mSELECT * FROM `meal_plans` WHERE (`meal_plans`.`id` = 2) [0m
+Rendering meal_plans/show
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/meal_plans/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#index (for 127.0.0.1 at 2009-09-07 15:08:47) [GET]
+  [4;35;1mMealPlan Load (0.2ms)[0m   [0mSELECT * FROM `meal_plans` [0m
+Rendering meal_plans/index
+  [4;36;1mMealPlan Columns (0.2ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+Completed in 7ms (View: 2, DB: 1) | 200 OK [http://localhost/meal_plans]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#show (for 127.0.0.1 at 2009-09-07 15:08:49) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mMealPlan Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `meal_plans`[0m
+  [4;36;1mMealPlan Load (0.1ms)[0m   [0;1mSELECT * FROM `meal_plans` WHERE (`meal_plans`.`id` = 2) [0m
+Rendering meal_plans/show
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/meal_plans/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#index (for 127.0.0.1 at 2009-09-07 15:08:50) [GET]
+  [4;35;1mMealPlan Load (0.2ms)[0m   [0mSELECT * FROM `meal_plans` [0m
+Rendering meal_plans/index
+  [4;36;1mMealPlan Columns (0.2ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/meal_plans]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#destroy (for 127.0.0.1 at 2009-09-07 15:08:51) [DELETE]
+  Parameters: {"authenticity_token"=>"0tlVtrubLvb1KxUzpDIzECBdPHlnAz1DHGOkycDBp9w=", "id"=>"2"}
+  [4;35;1mMealPlan Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `meal_plans`[0m
+  [4;36;1mMealPlan Load (0.1ms)[0m   [0;1mSELECT * FROM `meal_plans` WHERE (`meal_plans`.`id` = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMealPlan Destroy (0.1ms)[0m   [0;1mDELETE FROM `meal_plans` WHERE `id` = 2[0m
+  [4;35;1mSQL (41.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/meal_plans
+Completed in 47ms (DB: 42) | 302 Found [http://localhost/meal_plans/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#index (for 127.0.0.1 at 2009-09-07 15:08:51) [GET]
+  [4;36;1mMealPlan Load (0.1ms)[0m   [0;1mSELECT * FROM `meal_plans` [0m
+Rendering meal_plans/index
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://localhost/meal_plans]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#new (for 127.0.0.1 at 2009-09-07 15:08:52) [GET]
+  [4;35;1mMealPlan Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `meal_plans`[0m
+Rendering meal_plans/new
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/meal_plans/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#create (for 127.0.0.1 at 2009-09-07 15:09:00) [POST]
+  Parameters: {"commit"=>"Create", "meal_plan"=>{"name"=>"plann"}, "authenticity_token"=>"0tlVtrubLvb1KxUzpDIzECBdPHlnAz1DHGOkycDBp9w="}
+  [4;36;1mMealPlan Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMealPlan Create (0.1ms)[0m   [0;1mINSERT INTO `meal_plans` (`name`, `created_at`, `updated_at`) VALUES('plann', '2009-09-07 20:09:00', '2009-09-07 20:09:00')[0m
+  [4;35;1mSQL (58.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/meal_plans/3
+Completed in 65ms (DB: 59) | 302 Found [http://localhost/meal_plans]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#show (for 127.0.0.1 at 2009-09-07 15:09:00) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mMealPlan Columns (13.7ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+  [4;35;1mMealPlan Load (0.1ms)[0m   [0mSELECT * FROM `meal_plans` WHERE (`meal_plans`.`id` = 3) [0m
+Rendering meal_plans/show
+Completed in 33ms (View: 1, DB: 14) | 200 OK [http://localhost/meal_plans/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#edit (for 127.0.0.1 at 2009-09-07 15:09:01) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mMealPlan Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+  [4;35;1mMealPlan Load (0.1ms)[0m   [0mSELECT * FROM `meal_plans` WHERE (`meal_plans`.`id` = 3) [0m
+Rendering meal_plans/edit
+Completed in 45ms (View: 2, DB: 1) | 200 OK [http://localhost/meal_plans/3/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#update (for 127.0.0.1 at 2009-09-07 15:09:03) [PUT]
+  Parameters: {"commit"=>"Update", "meal_plan"=>{"name"=>"plan"}, "authenticity_token"=>"0tlVtrubLvb1KxUzpDIzECBdPHlnAz1DHGOkycDBp9w=", "id"=>"3"}
+  [4;36;1mMealPlan Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+  [4;35;1mMealPlan Load (0.1ms)[0m   [0mSELECT * FROM `meal_plans` WHERE (`meal_plans`.`id` = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMealPlan Update (0.1ms)[0m   [0mUPDATE `meal_plans` SET `updated_at` = '2009-09-07 20:09:03', `name` = 'plan' WHERE `id` = 3[0m
+  [4;36;1mSQL (56.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/meal_plans/3
+Completed in 63ms (DB: 57) | 302 Found [http://localhost/meal_plans/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#show (for 127.0.0.1 at 2009-09-07 15:09:03) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mMealPlan Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `meal_plans`[0m
+  [4;36;1mMealPlan Load (0.1ms)[0m   [0;1mSELECT * FROM `meal_plans` WHERE (`meal_plans`.`id` = 3) [0m
+Rendering meal_plans/show
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/meal_plans/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#index (for 127.0.0.1 at 2009-09-07 15:09:04) [GET]
+  [4;35;1mMealPlan Load (0.2ms)[0m   [0mSELECT * FROM `meal_plans` [0m
+Rendering meal_plans/index
+  [4;36;1mMealPlan Columns (0.2ms)[0m   [0;1mSHOW FIELDS FROM `meal_plans`[0m
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/meal_plans]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#destroy (for 127.0.0.1 at 2009-09-07 15:09:07) [DELETE]
+  Parameters: {"authenticity_token"=>"0tlVtrubLvb1KxUzpDIzECBdPHlnAz1DHGOkycDBp9w=", "id"=>"3"}
+  [4;35;1mMealPlan Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `meal_plans`[0m
+  [4;36;1mMealPlan Load (0.2ms)[0m   [0;1mSELECT * FROM `meal_plans` WHERE (`meal_plans`.`id` = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMealPlan Destroy (0.1ms)[0m   [0;1mDELETE FROM `meal_plans` WHERE `id` = 3[0m
+  [4;35;1mSQL (37.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/meal_plans
+Completed in 45ms (DB: 40) | 302 Found [http://localhost/meal_plans/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MealPlansController#index (for 127.0.0.1 at 2009-09-07 15:09:07) [GET]
+  [4;36;1mMealPlan Load (0.2ms)[0m   [0;1mSELECT * FROM `meal_plans` [0m
+Rendering meal_plans/index
+Completed in 43ms (View: 0, DB: 0) | 200 OK [http://localhost/meal_plans]
+  [4;35;1mSQL (6.6ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-09-07 15:09:11) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering users/index
+Completed in 5ms (View: 0, DB: 7) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-09-07 15:11:43) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering users/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-09-07 15:11:44) [GET]
+  [4;35;1mUser Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-09-07 15:11:50) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"0tlVtrubLvb1KxUzpDIzECBdPHlnAz1DHGOkycDBp9w=", "user"=>{"username"=>"joshua"}}
+  [4;36;1mUser Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO `users` (`created_at`, `updated_at`, `username`) VALUES('2009-09-07 20:11:50', '2009-09-07 20:11:50', 'joshua')[0m
+  [4;35;1mSQL (44.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/5
+Completed in 52ms (DB: 45) | 302 Found [http://localhost/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-09-07 15:11:50) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mUser Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 5) [0m
+Rendering users/show
+  [4;36;1mMealPlan Load (0.2ms)[0m   [0;1mSELECT `meal_plans`.* FROM `meal_plans` INNER JOIN `users_meal_plans` ON `meal_plans`.id = `users_meal_plans`.meal_plan_id WHERE ((`users_meal_plans`.user_id = 5)) [0m
+Completed in 50ms (View: 46, DB: 1) | 200 OK [http://localhost/users/5]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-09-07 15:11:52) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mUser Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 5) [0m
+Rendering users/edit
+
+ActionView::TemplateError (undefined local variable or method `users_meal_plans_path' for #<ActionView::Base:0x7fdec60e1288>) on line #15 of app/views/users/edit.html.erb:
+12: 
+13: <%= link_to 'Show', @user %>
+14: <%= link_to 'Back', users_path %>
+15: <%= link_to 'Manage meal plans', users_meal_plans_path %>
+
+    app/views/users/edit.html.erb:15
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (23.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-09-07 15:12:57) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mUser Columns (0.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 5) [0m
+Rendering users/edit
+
+ActionView::TemplateError (undefined local variable or method `users_meal_plans_path' for #<ActionView::Base:0x7fdec5fc5e80>) on line #15 of app/views/users/edit.html.erb:
+12: 
+13: <%= link_to 'Show', @user %>
+14: <%= link_to 'Back', users_path %>
+15: <%= link_to 'Manage meal plans', users_meal_plans_path %>
+
+    app/views/users/edit.html.erb:15
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (24.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)

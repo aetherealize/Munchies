@@ -1,0 +1,12 @@
+<h1>Listing meal plans</h1>
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% @meal_plans.each do |p| %>
+    <tr>
+      <td><%= h p.name %></td>
+    </tr>
+  <% end %>
+</table>
+

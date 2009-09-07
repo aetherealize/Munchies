@@ -1,0 +1,14 @@
+<h1>Edit meal plan</h1>
+
+<% form_for(@meal_plan) do |p| %>
+  <%= p.error_messages %>
+  <p>
+    <%= p.label :name %><br />
+    <%= p.text_field :name %>
+  </p>
+   <p>
+    <%= p.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', meal_plans_path %>
