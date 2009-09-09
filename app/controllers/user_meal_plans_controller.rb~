@@ -1,0 +1,7 @@
+class UserMealPlansController < ApplicationController
+  def index
+    if @user.nil?
+      redirect_to('http://www.google.com')
+    end
+  end
+end

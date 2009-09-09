@@ -1,0 +1,6 @@
+<h1> Users -- Meal Plans </h1>
+<% if @user %>
+  <% @user.meal_plans.each do |mp| %>
+    <%= h mp.name %>
+  <% end %>
+<% end %>

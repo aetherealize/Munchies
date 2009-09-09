@@ -7,8 +7,9 @@ ActionController::Routing::Routes.draw do |map|
    map.resources :users
    
    map.resources :meal_plans
-   map.resources :users, :has_many => :meal_plans, :through => :users_meal_plans
-
+   map.resources :users, :has_many => :meal_plans
+   
+   map.resources :users_meal_plans
 
 
   # The priority is based upon order of creation: first created -> highest priority.

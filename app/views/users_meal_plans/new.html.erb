@@ -1,0 +1,14 @@
+<h1>Associate User and Meal Plan</h1>
+<% form_for(@users_meal_plan) do |f| %>
+  <% if @user.nil?  %>
+    <%= collection_select(:users_meal_plan, :user_id, User.all, :id, :username) %>
+  <% else %>
+    <%= @users_meal_plan.user_id = @user.id %>
+  <% end %>
+  <% if @meal_plan.nil? %>
+    <%= collection_select(:users_meal_plan, :meal_plan_id, MealPlan.all, :id, :name) %>
+  <% else %>
+    <%= @users_meal_plan.meal_plan_id = @meal_plan.id %>
+  <% end %>
+  <%= f.submit "Create" %>
+<% end %>

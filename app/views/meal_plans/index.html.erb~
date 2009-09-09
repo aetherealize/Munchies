@@ -3,10 +3,15 @@
   <tr>
     <th>Name</th>
   </tr>
-  <% @meal_plans.each do |p| %>
+  <% @meal_plans.each do |meal_plan| %>
     <tr>
-      <td><%= h p.name %></td>
+      <td><%= h meal_plan.name %></td>
+      <td><%= link_to 'Show', meal_plan %></td>
+      <td><%= link_to 'Edit', edit_meal_plan_path(meal_plan) %></td>
+      <td><%= link_to 'Destroy', meal_plan, :method => :delete %></td>
     </tr>
   <% end %>
 </table>
+
+<%= link_to 'New Meal Plan', new_meal_plan_path %>
 

@@ -1,0 +1,6 @@
+<h1>Associate User and Meal Plan</h1>
+<% form_for(@users_meal_plan) do |f| %>
+  <%= collection_select(:users_meal_plan, :user_id, User.all, :id, :username) %>
+  <%= collection_select(:users_meal_plan, :meal_plan_id, MealPlan.all, :id, :name) %>
+  <%= f.submit "Create" %>
+<% end %>

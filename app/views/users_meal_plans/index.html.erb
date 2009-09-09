@@ -1,0 +1,8 @@
+<h1> Users -- Meal Plans </h1>
+<% if @user %>
+  <% @user.meal_plans.each do |mp| %>
+    <%= h mp.name %>
+  <% end %>
+<% end %>
+
+<%= link_to 'Add meal plan', new_users_meal_plan_path(:user_id => @user.id) %>
